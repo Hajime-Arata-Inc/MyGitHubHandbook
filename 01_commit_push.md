@@ -278,11 +278,17 @@ git commit -m "first commit(任意のコメントを記入)"
 ### ステップ3：ローカルにリモート `origin` を紐づけ
 #### 3-1. SSH（推奨）
 - `ls -al ~/.ssh` SSH鍵未設定なら（1回だけ）
-- 無ければ作成する
+- 無ければ鍵を作成する
 ```
-ssh-keygen -t ******* -c "YOURGITHUBEMAIL"
-eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_********
-pbcopy < ~/.ssh/id_********.pub → GitHub > Settings > SSH and GPG keys > New SSH key > 貼り付け
+# 鍵を作成（Ed25519方式）
+ssh-keygen -t ed25519 -C "YOURGITHUBEMAIL"
+
+# ssh-agent を起動して鍵を登録
+eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519
+
+# 公開鍵をクリップボードへコピー（macOS）
+pbcopy < ~/.ssh/id_ed25519.pub
+# GitHub > Settings > SSH and GPG keys > New SSH key > 貼り付け
 
 # リモート追加
 git remote add origin git@github.com:YOURNAME/YOURRIPOSITRY.git
