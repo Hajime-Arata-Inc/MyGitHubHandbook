@@ -69,8 +69,8 @@ git push
 `git push`
 
 ## 2. git status チェックリスト
-|:--表示--:|:--意味---|:--やること---|
-|---------|----------|------------|
+|表示|意味|やること|
+|:---------:|:----------:|:------------:|
 |`Untracked files`	|新規ファイル（未追跡）	|`git add ファイル名` or `.gitignore`|
 |`Changes not staged`	|変更したが未ステージ	|`git add`|
 |`Changes to be committed`	|ステージ済み	|`git commit`|
@@ -163,7 +163,7 @@ git push --force-with-lease
 - agent起動
 `eval "$(ssh-agent -s)"`
 - macOS 推奨設定（自動登録＆キーチェーン連携）
-`mkdir -p ~/.ssh`
+`ls -al ~/.ssh`
 `printf "%s\n" "Host *" "  AddKeysToAgent yes" "  UseKeychain yes" "  IdentityFile ~/.ssh/<秘密鍵ファイル名>" >> ~/.ssh/config`
 - 鍵を agent に読み込み（<秘密鍵ファイル名>を実名に置換）
 `ssh-add ~/.ssh/<秘密鍵ファイル名>`
@@ -179,7 +179,7 @@ git push --force-with-lease
 #### 1-6. リモートURLがHTTPSならSSHへ切替
 ```
 git remote -v
-git remote set-url origin git@github.com:<USER>/<REPO>.git
+git remote set-url origin git@github.com:<USERNAME>/<REPOSITRY>.git
 ```
 
 ### ステップ2：リポジトリをクローン
