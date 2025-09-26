@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Python / env（念のためのテンプレ）
+.env
+*.env
+__pycache__/
+*.pyc
+
+# Node（将来使う場合に備え）
+node_modules/
