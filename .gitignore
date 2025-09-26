@@ -9,3 +9,11 @@ __pycache__/
 
 # Node（将来使う場合に備え）
 node_modules/
+.DS_Store
+.env
+*.pem
+*.key
+*.pub
+__pycache__/
+*.pyc
+node_modules/
