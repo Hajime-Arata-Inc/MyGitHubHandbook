@@ -70,7 +70,7 @@ git push
 
 ## 2. git status チェックリスト
 |表示|意味|やること|
-|:---------:|:----------:|:------------:|
+|:---------|:----------:|:------------:|
 |`Untracked files`	|新規ファイル（未追跡）	|`git add ファイル名` or `.gitignore`|
 |`Changes not staged`	|変更したが未ステージ	|`git add`|
 |`Changes to be committed`	|ステージ済み	|`git commit`|
