@@ -4,7 +4,7 @@
 
 ---
 
-## 📘 目的
+## 目的
 
 - Git/GitHubの基本操作の理解
 - 実際に使えるコマンドやワークフローの記録
@@ -12,7 +12,7 @@
 
 ---
 
-## 📂 コンテンツ一覧
+## コンテンツ一覧
 
 | 項目 | 内容 |
 |------|------|
@@ -26,15 +26,16 @@
 
 ---
 
-## 🚀 今後の予定
+## 今後の予定
 
 - コマンド早見表の追加
 - GUIツール（GitHub Desktop, SourceTreeなど）の解説
 - GitHub Actionsの入門編
+- GitHubをつかこなしたい。
 
 ---
 
-## 🛠 対象読者
+## 対象読者
 
 - Git/GitHubをこれから学ぶ初学者
 - 日常的にGitを使っていて困ったときに調べたい人
@@ -42,12 +43,23 @@
 
 ---
 
-## 📄 ライセンス
+## ライセンス
 
 このリポジトリは MITライセンス で公開しています。自由に使ってください。
 
 ---
 
-## 🙌 作成者
+## 作成者
 
 [Hajime Takeda（Arata Inc.）]
+
+---
+*注意書き*
+- このハンドブックの中のメールアドレス・鍵は例です。実際の情報は絶対に公開しないでください
+- 本ハンドブックの内容を利用したことによるいかなるトラブル・損害についても、作者は一切の責任を負いません。
+*Note*
+- This handbook is for learning purposes only. Do not expose your real emails, keys, or secrets.
+*Disclaimer*
+- The author assumes no responsibility for any trouble or damage caused by using this handbook.
+---
+
