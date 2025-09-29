@@ -22,7 +22,6 @@ git ls-files | grep -E '\.env|id_rsa|id_ed25519|\.pem' || echo "OK: 機密ファ
 - 履歴からの完全削除を検討する（`git filter-repo` `git filter-branch`）
 - SECRET_KEYを即時ローテーションする。
 
-
 ### 2. 仕組みで守る
 - `.gitignore` に `.env`、鍵、DB ダンプ、`/media` 等を追加
 - `pre-commit` で **secret scan**（例：`gitleaks`）と **lint/test** を自動化
@@ -33,5 +32,14 @@ git ls-files | grep -E '\.env|id_rsa|id_ed25519|\.pem' || echo "OK: 機密ファ
 1. **直後**なら：`git reset HEAD~` で取り消し、`.gitignore` 追加
 2. **push 済み**なら：キー無効化／ローテーション → 履歴から削除（`git filter-repo`）→ 影響範囲通知
 3. Issue/PR で**事後対策を記録**（再発防止）
+
+
+*注意書き*
+- このハンドブックの中のメールアドレス・鍵は例です。実際の情報は絶対に公開しないでください
+- 本ハンドブックの内容を利用したことによるいかなるトラブル・損害についても、作者は一切の責任を負いません。
+*Note*
+- This handbook is for learning purposes only. Do not expose your real emails, keys, or secrets.
+*Disclaimer*
+- The author assumes no responsibility for any trouble or damage caused by using this handbook.
 
 
