@@ -31,11 +31,14 @@ __pycache__/
 *.pyc
 .env
 db.sqlite3
+```
 6. デフォルトブランチ名を統一
-新しいGitでは main が標準ですが、プロジェクトによっては master もあります。
-git config --global init.defaultBranch main
+新しいGitでは `main` が標準ですが、プロジェクトによっては `master`もあります。
+`git config --global init.defaultBranch main`
+
 7. SSH接続を簡単に
-毎回パス入力せずに済むように、ssh-agent に鍵を登録。
+毎回パス入力せずに済むように、`ssh-agent` に鍵を登録。
+```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
