@@ -16,11 +16,13 @@
 
 | 項目 | 内容 |
 |------|------|
-| `01_commit_push.md` | commitとpushについて解説 |
-| `02_branch_workflow.md` | ブランチ運用とマージ戦略 |
-| `03_github_features.md` | GitHubの機能（Issue、PR、Actionsなど） |
+| `01_commit_push.md` | commitとpushについて |
+| `02_branch_workflow.md` | ブランチとマージについて |
+| `03_github_features.md` | GitHubの主な機能ガイド（Issue、PR、Actionsなど） |
 | `04_troubleshooting.md` | よくあるエラーと対処法 |
 | `05_tips.md` | 小技・便利設定など |
+| `06_secret_management.md` |  情報漏洩防止を徹底しましょう |
+
 
 ---
 

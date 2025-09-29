@@ -1,41 +1,5 @@
-# 03. GitHubの主な機能ガイド（Issues / Pull Requests / Actions ほか）
-
+# 03. GitHubの主な機能ガイド（Code / Issues / Pull Requests / Actions / Projects / Security / Insight）
 > 目的：**GitHub の画面のどこで何ができるか**を理解しましょう。
-> 対象：Git/GitHub 初心者。ブラウザでの操作を中心に、必要に応じて CLI や設定ファイルも併記。
-
----
-
-## 目次
-
-* [0. クイックスタート（5分）](#0-クイックスタート5分)
-* [1. Issues（課題管理）](#1-issues課題管理)
-* [2. Pull Requests（変更の提案とレビュー）](#2-pull-requests変更の提案とレビュー)
-* [3. Actions（自動化 / CI/CD）](#3-actions自動化--cicd)
-* [4. Projects（プロジェクト管理・カンバン）](#4-projectsプロジェクト管理カンバン)
-* [5. Discussions / Wiki（情報共有）](#5-discussions--wiki情報共有)
-* [6. Releases / Tags（配布物の管理）](#6-releases--tags配布物の管理)
-* [7. セキュリティ & 権限（必読）](#7-セキュリティ--権限必読)
-* [8. 通知・レビュー体制・運用Tips](#8-通知レビュー体制運用tips)
-* [付録A. よく使うラベル例](#付録a-よく使うラベル例)
-* [付録B. PRテンプレート / Issueテンプレート例](#付録b-prテンプレート--issueテンプレート例)
-* [付録C. 最小のGitHub Actions例](#付録c-最小のgithub-actions例)
-
----
-
-## 0. クイックスタート（5分）
-
-**毎日の入口**はリポジトリTopのタブ列：`Code` / `Issues` / `Pull requests` / `Actions` / `Projects` / `Security` / `Insights`
-
-**今日やることの流れ（例）**
-1-1. **Issues** で自分の担当Issueを1つ取る → 「Assignees」に自分を設定。
-1-2. `Code` > `Branch: main` から **新規ブランチ**を作成（例：`feature/auth`）。
-1-3. 変更をコミット＆プッシュ → `Pull requests` タブ → **New pull request**。
-1-4. PRの説明を埋める → レビュアを追加 → CI（Actions）通過を確認 → **Merge**。
-1-5. **Close Issue**（`linked issues` があればマージで自動Close）。
-
-> UIの場所：各タブはリポジトリの上部。新規Issue/PRボタンは右上付近の **New** ボタン。
-
----
 
 ## 1. Codeとは
 > GitHubリポジトリの中身（ソースコードやフォルダ構成）を表示する場所です。プロジェクト全体を見たり取得したりするための基本画面です。
@@ -91,7 +55,6 @@
 - セキュリティ（秘密情報の混入、認可、入力検証）
 - 可読性（命名・コメント・テストの有無）
 - Draft pull request：作業途中で相談したいときは Create draft pull request。
-
 
 ## 3. Actionsとは
 > GitHub上で 自動的に処理を実行してくれる仕組み です。CI/CD（継続的インテグレーション / 継続的デリバリー）を簡単に実現できます。
@@ -207,3 +170,26 @@ jobs:
 
 ## 6.Insightとは
 > GitHubリポジトリの 活動状況や貢献度を可視化するタブ です。「どのくらい開発が進んでいるか」「誰がどんな貢献をしているか」を見える化できます。
+
+### 主な機能
+- Contributors: 誰がどのくらいコードを追加・修正しているかを可視化。貢献度を把握できます。
+- Commits: 時系列でのコミット数を表示し、活発に更新されているかを確認可能。
+- Code frequency: 追加・削除されたコード行数の推移を確認できます。
+- Pull requests: PR（プルリクエスト）の作成・マージ状況を分析できます。
+- Traffic: リポジトリへのアクセス数やクローン数を確認可能。
+
+### 活用ポイント
+- 個人学習リポジトリでは「どのくらい作業してきたか」の振り返りに便利。
+- チーム開発では「誰がどの部分を担当しているか」「開発が停滞していないか」を客観的に把握できる。
+- プロフィールや取引先へのアピールにも使える（定期的にコミットしていることを示せる）。
+
+---
+
+*注意書き*
+- このハンドブックの中のメールアドレス・鍵は例です。実際の情報は絶対に公開しないでください
+- 本ハンドブックの内容を利用したことによるいかなるトラブル・損害についても、作者は一切の責任を負いません。
+*Note*
+- This handbook is for learning purposes only. Do not expose your real emails, keys, or secrets.
+*Disclaimer*
+- The author assumes no responsibility for any trouble or damage caused by using this handbook.
+
