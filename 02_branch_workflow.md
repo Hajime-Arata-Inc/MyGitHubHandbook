@@ -87,6 +87,26 @@ git merge feature/login      # feature/login の変更を main に統合
   - コードの変更内容を可視化
   - レビューや`main`への取り込みを依頼（チームメンバーが内容を確認できる）
     - 作業例：　ローカルで `feature/login` ブランチを作業　→ `git push origin feature/login`で GitHubにアップ → GitHub上でPull Requestを作成する → `feature/login` を `main`に取り込メルかどうかの確認を依頼 → 責任者や担当者が確認 → レビューやCIが通れば`Merge pull request`で統合
+#### ローカルで新しいブランチ(featur/login)を作成し、pushまでのコマンド
+```bash
+# mainブランチを最新にしてから作業
+git switch main
+git pull origin main
+
+# 新しいブランチを作成して移動
+git switch -c feature/login
+
+# ファイルを編集したらステージング
+git add <YOURFILENAME>   # ファイルを指定。全ファイルなら git add .
+
+# コミット
+git commit -m "COMMENT"
+
+# リモートにブランチをプッシュ
+git push -u origin feature/login
+
+# pushした後はGitHub（リモート）を開き、Codeのタブをクリック。内容を確認しPull requestする。
+```
 
 ### ３-２.Pull requestの作り方
 1. ブランチを push → 「Compare & pull request」
@@ -109,8 +129,14 @@ git merge feature/login      # feature/login の変更を main に統合
 
 ### 3-3. マージ後
 - 自動デプロイ（あれば）→ モニタリング確認
-- ブランチ削除
+- ブランチ削除(ブランチ整理するするために必要なら削除する。使うなら残す)
+```bash
+git switch main              # mainに戻る
+git pull origin main         # 最新を取得
+git branch -d feature/update-readme
+```
 - リリースノートへ要約を転記（Conventional Commits なら自動生成も可）
+
 
 > Pull request テンプレート（サンプル）
 
