@@ -27,13 +27,19 @@ ssh-add ~/.ssh/id_ed25519
 
 <h1>ブランチ・リモート管理系</h1>
 
-1. ローカルで不要なブランチを一掃する。
+1. マージ済み/未マージのブランチを確認する
+- マージ済みブランチを探す。
+`git branch --merged main`
+- 未マージのブランチを探す。
+`git branch --no-merged main`
+
+2. ローカルで不要なブランチを一掃する
 ```bash
 git fetch --prune
 git branch --merged | grep -v 'main' | xargs git branch -d
 ```
 
-2. リモートとローカルを整理整頓（整理・同期）するコマンド一覧
+3. リモートとローカルを整理整頓（整理・同期）するコマンド一覧
 - リモートで削除されたブランチをローカルでも削除する。
 `git fetch --prune`
 - ローカルとリモートの全ブランチ一覧を確認する.
